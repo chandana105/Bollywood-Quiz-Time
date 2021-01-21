@@ -29,19 +29,19 @@ const msgBox = boxen( greeting, boxenOptions );
 log(msgBox);
 
 
-let levelOneDesc = chalk.black.bgAnsi256(194).bold((`LEVEL ONE ${chalk.underline.italic('Complete the names of following movies')} !`));
+let levelOneDesc = chalk.black.bgAnsi256(194).bold((`LEVEL ONE`));
 
 const msgBox1 = boxen( levelOneDesc, boxenOption );
 
 
 
 
-let levelTwoDesc = chalk.black.bgAnsi256(194).bold((`LEVEL TWO ${chalk.underline.italic('Guess the name of bollywood movie based on given dialogues !')}`));
+let levelTwoDesc = chalk.black.bgAnsi256(194).bold((`LEVEL TWO`));
 
 const msgBox2 = boxen( levelTwoDesc, boxenOption );
 
 
-let levelThreeDesc = chalk.black.bgAnsi256(194).bold((`LEVEL THREE ${chalk.underline.italic('Guess the names of bollywood movie based on song titles , also guess the names of Lead Actors based on given bollywood movie!')}`));
+let levelThreeDesc = chalk.black.bgAnsi256(194).bold((`LEVEL THREE`));
 
 const msgBox3 = boxen( levelThreeDesc, boxenOption );
 
@@ -217,7 +217,7 @@ log(chalk.blueBright.bold('b. For each wrong answer,your 1 point will be deducte
   }
 
       if (levelOneHeading) clearInterval(levelOneHeading)    
-     },2000)
+     },1000)
  
   if (heading) clearInterval(heading) 
 
@@ -275,11 +275,11 @@ scorePart();
 
 function correctPart(question,choices, answer) {
    log(chalk.cyanBright('YOU ARE RIGHT !! :)'))
-      log(chalk.cyanBright('Its ' + question +  choices[answer]))
+      
 }
 function wrongPart(question,choices, answer) {
     log(chalk.redBright('YOU ARE WRONG !! :('))
-      log(chalk.redBright('Its ' + question +  choices[answer]))
+      
 }
 function scorePart() {
   log(chalk.yellowBright('Your Score' , score))
@@ -306,93 +306,93 @@ function levelTwoScoreDeduct() {
 
 
 var questions = [{
-  question :'Kapoor ',
+  question :`Complete the name of this movie : 'Kapoor----? `,
   choices :  ['the Kareena', '& Brothers', '& Sons', '& Kapoor'],
   answer : 2
 },
  {
-  question :'Nil Battey ',
+  question :`Complete the name of this movie : 'Nil Battey----? `,
   choices :  ['Chor', 'Sannata', 'Pathr', 'Nil'],
   answer :  1
 },{
-  question :'A ',
+  question :`Complete the name of this movie : 'A----? `,
   choices :  ['Common Man', 'Hitler', 'Wednesday', 'Hint'],
   answer :  2
 },{
-  question :'Lage Raho ',
+  question :`Complete the name of this movie : 'Lage Raho----? `,
   choices :  ['Munna Bhai', 'Chunna bhai', 'bhai', 'bhaiji'],
   answer :  0
 },{
-  question :'No One ',
+  question :`Complete the name of this movie : 'No One----? `,
   choices :  ['Can do this', 'Can Fight', 'Saved Her', 'Killed Jesica'],
   answer :  3
 }
 ]
 
 var questionsPartTwo = [{
-  question :'“Mere paas maa hai.”',
+  question :`Guess the name of bollywood movie based on the dialogue--- '“Mere paas maa hai.”'`,
   choices :  ['Janjir', 'Anand', 'Deewar'],
   answer : 2
 },
  {
-  question :'“Babumoshai, zindagi badi honi chahiye, lambi nahi.”',
+  question :`Guess the name of bollywood movie based on the dialogue---'“Babumoshai, zindagi badi honi chahiye, lambi nahi.”'`,
   choices :  ['Aradhana', 'Anand', 'Bawarchi'],
   answer :  1
 },{
-  question :'“Hum jahan khade hote hain line vahi se shuru hoti hai.”',
+  question :`Guess the name of bollywood movie based on the dialogue---'“Hum jahan khade hote hain line vahi se shuru hoti hai.”'`,
   choices :  [' Kaalia', 'Mr. India', 'Maine Pyaar Kiya'],
   answer :  0
 },{
-  question :'“Tareekh pe tareekh, tareekh pe tareekh, tareekh pe tareekh milti gayi My Lord, par insaaf nahi mila!”',
+  question :`Guess the name of bollywood movie based on the dialogue---'“Tareekh pe tareekh, tareekh pe tareekh, tareekh pe tareekh milti gayi My Lord, par insaaf nahi mila!”'`,
   choices :  ['Ghayal', 'Damini ', 'Gadar- Ek prem katha'],
   answer :  1
 },{
-  question :'“Sara shehar mujhe lion ke naam se jaanta hai.”',
+  question :`Guess the name of bollywood movie based on the dialogue---'“Sara shehar mujhe lion ke naam se jaanta hai.”'`,
   choices :  ['Mr. India', 'Yudh', 'Kalicharan'],
   answer :  2
 }
 ]
 
 var questionsPartThree = [{
-  question :'‘Aaj Phir Jeene Ki Tamanna Hai’ ',
+  question :`Guess the name of bollywood movie based on the song title---'‘Aaj Phir Jeene Ki Tamanna Hai’ '`,
   choices :  ['Hare Rama Hare Karishna', 'Guide', 'Awaara'],
   answer : 1
 },
  {
-  question :'“Honton Mein Aisi Baat Main”',
+  question :`Guess the name of bollywood movie based on the song title---'“Honton Mein Aisi Baat Main”'`,
   choices :  ['Namak Halal ', ' Jewel Thief ', ' Caravan '],
   answer :  1
 },{
-  question :'"Yaara O Yaara Milna Hamara”',
+  question :`Guess the name of bollywood movie based on the song title---'"Yaara O Yaara Milna Hamara”'`,
   choices :  ['Jeet', 'Devdas', 'Raja'],
   answer :  0
 },{
-  question :'Chote Chote Bhaiyon Ke ',
+  question :`Guess the name of bollywood movie based on the song title---'Chote Chote Bhaiyon Ke '`,
   choices :  ['Jodi Kya Banayi Wah Wah Ramji', 'Hum Aapke Hain Koun', 'Hum Saath-Saath Hain'],
   answer :  2
 },{
-  question :'‘Aap Jaisa Koi’',
+  question :`Guess the name of bollywood movie based on the song title---'‘Aap Jaisa Koi’'`,
   choices :  ['Qurbani', 'Kabhi Kabhi', 'Hare Rama Hare Karishna'],
   answer :  0
 },
 {
-  question :'“Dheere Dheere Se Meri Zindagi Mein Aana”',
+  question :`Guess the name of bollywood movie based on the song title---'“Dheere Dheere Se Meri Zindagi Mein Aana”'`,
   choices :  ['Sadak', ' Khiladi ', 'Aashiqui'],
   answer :  2
 },{
-  question :'“Bahut Pyaar Karte Hai”',
+  question :`Guess the name of bollywood movie based on the song title---'“Bahut Pyaar Karte Hai”'`,
   choices :  ['Saajan ', 'Darr', 'Dilwale'],
   answer :  0
 },{
-  question :'Guess the names of Lead Actors in given movie names in upcoming last 3 questions: ‘Main Prem ki Deewani Hoon’',
+  question :'Guess the name of Lead Actors in this movie:-- ‘Main Prem ki Deewani Hoon’',
   choices :  [' Abhishek Bachchan, Hrithik Roshan and Karishma Kapoor', ' ShahRukh Khan, Hrithik Roshan and Kareena Kapoor', ' Abhishek Bachchan, Hrithik Roshan and Kareena Kapoor'],
   answer :  2
 },{
-  question :'‘Aitraaz’',
+  question :`Guess the name of Lead Actors in this movie:---'‘Aitraaz’'`,
   choices :  ['Akshay Khanna, Karishma Kapoor and Priyanka Chopra', 'Akshay Kumar, Kareena Kapoor and Priyanka Chopra', 'ShahRukh Khan, Kareena Kapoor and Priyanka Chopra'],
   answer :  1
 },{
-  question :'‘Fanaa’',
+  question :`Guess the name of Lead Actors in this movie:---'‘Fanaa’'`,
   choices :  ['Aamir Khan and Kajol,', 'Salman Khan and Kajol,', 'Aamir Khan and Kareena Kapoor,'],
   answer :  0
 }
