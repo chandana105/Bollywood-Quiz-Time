@@ -145,7 +145,7 @@ log(chalk.yellowBright.bold.italic('Welcome ' + name.toUpperCase() + '!! Lets pl
 ('So here comes the LEVEL -I'));
    
       if (levelOneComing) clearInterval(levelOneComing)    
-     },3000)
+     },1000)
 
      let levelOneHeading = setInterval(() => {
       log(msgBox1);  
@@ -217,7 +217,7 @@ log(chalk.blueBright.bold('b. For each wrong answer,your 1 point will be deducte
   }
 
       if (levelOneHeading) clearInterval(levelOneHeading)    
-     },5000)
+     },2000)
  
   if (heading) clearInterval(heading) 
 
